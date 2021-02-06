@@ -7,7 +7,7 @@ import styles from "react-responsive-carousel/lib/styles/carousel.min.css";
 import xor from "lodash/xor";
 
 import Layout from "src/global/Layout";
-import axios from "src/components/Axios/";
+import axios from "src/components/_settings/axios";
 
 function IndexPage() {
   const [items, setItems] = useState([]);
