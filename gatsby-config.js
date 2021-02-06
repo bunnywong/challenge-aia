@@ -1,3 +1,9 @@
+const colors = require("colors");
+colors.setTheme({
+  info: ["white", "inverse"],
+  warn: ["yellow", "inverse"],
+  success: ["green", "inverse"],
+});
 module.exports = {
   siteMetadata: {
     title: 'Gatsby Storybook Starter',
