@@ -4,6 +4,14 @@ colors.setTheme({
   warn: ["yellow", "inverse"],
   success: ["green", "inverse"],
 });
+
+const activeEnv =
+  process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development";
+console.log(`Using environment config: '${activeEnv}'`.info);
+require("dotenv").config({
+  path: `.env.${activeEnv}`,
+});
+
 module.exports = {
   siteMetadata: {
     title: 'Gatsby Storybook Starter',
