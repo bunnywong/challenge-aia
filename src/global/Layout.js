@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 import 'bootstrap/dist/css/bootstrap.min.css'
+import 'react-bootstrap-table/dist/react-bootstrap-table-all.min.css'
 
 import GlobalStyle from './GlobalStyle';
 
