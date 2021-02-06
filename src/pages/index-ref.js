@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import Layout from '../global/Layout';
-import Image from '../components/Image';
+import Layout from "../global/Layout";
+import Image from "../components/atoms/Image";
 
 const Page = styled.div`
   width: 100%;
