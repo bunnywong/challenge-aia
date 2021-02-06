@@ -1,41 +1,47 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { useEffect, useState } from "react";
+import styled from "styled-components";
+import { Carousel } from "react-responsive-carousel";
+import styles from "react-responsive-carousel/lib/styles/carousel.min.css";
 
-import Layout from '../global/Layout';
-import Image from '../components/Image';
+import Layout from "src/global/Layout";
+import axios from "src/components/Axios/";
 
-const Page = styled.div`
-  width: 100%;
-  height: 100vh;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
+function IndexPage() {
+  const [items, setItems] = useState([]);
+  const imagesCount = 8;
+  const itemRange = Array.from(
+    { length: process.env.LIMITED_IDS },
+    () => Math.floor(Math.random() * process.env.LIMITED_IDS) + 1
+  ).splice(0, imagesCount);
 
-const Heading = styled.h1`
-  font-size: 24px;
-  color: #555;
-  margin-top: 60px;
-`;
+  useEffect(() => {
+    const fetchList = async () => {
+      const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+      const fetchItem = async (id) => {
+        await axios
+          .get(`/${id}`)
+          .then((response) => setItems((state) => [...state, response.data]));
+      };
+      for (let i = 0; i < imagesCount; i++) {
+        fetchItem(itemRange[i]);
+        await sleep(500);
+      }
+    };
+    fetchList();
+  }, []);
 
-const Label = styled.p`
-  font-size: 14px;
-  color: #aaa;
-  margin-top: 12px;
-  letter-spacing: 10px;
-  text-transform: uppercase;
-`;
-
-const IndexPage = () => (
-  <Layout>
-    <Page>
-      <Image />
-      <Heading>GatsbyJS + Storybook</Heading>
-      <Label>Starter</Label>
-    </Page>
-  </Layout>
-);
+  return (
+    <Layout>
+      <Carousel>
+        {items.map((item, index) => (
+          <div key={index}>
+            <img src={item.image.url} style={{ maxWidth: `300px` }} />
+            <p className="legend">{item.name}</p>
+          </div>
+        ))}
+      </Carousel>
+    </Layout>
+  );
+}
 
 export default IndexPage;
