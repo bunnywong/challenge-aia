@@ -1,12 +1,12 @@
 {
-  "name": "gatsby-starter-storybook",
-  "description": "Gatsby Storybook Starter",
-  "version": "1.1.0",
-  "author": "Marko Radak <mail@markoradak.com>",
+  "name": "challenge-aia",
+  "description": "React.js challenge by Gatsby + Storybook",
+  "version": "1.0.0",
+  "author": "Bunny Wong<me@bunnywong.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/markoradak/gatsby-starter-storybook"
+    "url": "https://github.com/bunnywong/challenge-aia"
   },
   "keywords": [
     "gatsby",
