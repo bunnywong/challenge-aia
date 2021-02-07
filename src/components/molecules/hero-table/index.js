@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table'
 import xor from 'lodash/xor'
 import includes from 'lodash/includes'
+import 'react-bootstrap-table/dist/react-bootstrap-table-all.min.css'
 
 function HeroTable({ items }) {
   const [favorites, setFavorites] = useState([])
