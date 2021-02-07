@@ -1,12 +1,12 @@
 {
-  "name": "challenge-aia",
+  "name": "challenge-hero",
   "description": "React.js challenge by Gatsby + Storybook",
   "version": "1.0.0",
   "author": "Bunny Wong<me@bunnywong.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bunnywong/challenge-aia"
+    "url": "https://github.com/bunnywong/challenge-hero"
   },
   "keywords": [
     "gatsby",
