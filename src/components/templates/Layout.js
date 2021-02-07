@@ -5,7 +5,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'react-bootstrap-table/dist/react-bootstrap-table-all.min.css'
 
-import GlobalStyle from './GlobalStyle'
+import GlobalStyle from 'src/components/_settings/GlobalStyle'
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -24,7 +24,7 @@ const Layout = ({ children }) => (
           <title>{data.site.siteMetadata.title}</title>
           <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         </Helmet>
-        <GlobalStyle />
+        {/*<GlobalStyle />*/}
         <>{children}</>
       </>
     )}

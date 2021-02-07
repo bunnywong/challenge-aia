@@ -2,7 +2,7 @@ import React from 'react';
 import { configure, addDecorator } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import styled from 'styled-components';
-import GlobalStyle from '../src/global/GlobalStyle';
+import GlobalStyle from '../src/components/_settings/GlobalStyle'
 
 const Wrapper = styled.div`
   display: flex;

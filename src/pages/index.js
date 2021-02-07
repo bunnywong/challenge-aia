@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import Switch from 'react-switch'
 
-import Layout from 'src/global/Layout'
+import Layout from 'src/components/templates/Layout'
 import axios from 'src/components/_settings/axios'
 import Axios from 'axios'
 import HeroCarousel from 'src/components/molecules/hero-carousel/'
