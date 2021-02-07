@@ -36,7 +36,7 @@ function IndexPage() {
     };
     for (let i = 0; i < imagesCount; i++) {
       fetchItem(itemRange[i]);
-      await sleep(500);
+      await sleep(process.env.FETCH_SLEEP)
     }
   };
   const handleClickFavorite = (id) => {
