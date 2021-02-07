@@ -6,27 +6,14 @@ import { StaticQuery, graphql } from 'gatsby'
 import GlobalStyle from 'src/components/_settings/GlobalStyle'
 
 const Layout = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `}
-    render={(data) => (
-      <>
-        <Helmet>
-          <title>{data.site.siteMetadata.title}</title>
-          <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        </Helmet>
-        <GlobalStyle />
-        <>{children}</>
-      </>
-    )}
-  />
+  <>
+    <Helmet>
+      <title>challenge Hero</title>
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    </Helmet>
+    <GlobalStyle />
+    <>{children}</>
+  </>
 )
 
 Layout.propTypes = {
