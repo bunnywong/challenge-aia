@@ -24,6 +24,8 @@
     "build:gatsby": "gatsby build",
     "build:storybook": "build-storybook -c .storybook -o storybook",
     "serve": "gatsby serve -o -p 8080",
+    "test": "jest",
+    "test:watch": "npm test -- --watch",
     "clean": "gatsby clean"
   },
   "dependencies": {
@@ -57,12 +59,17 @@
     "@storybook/addon-notes": "^5.1.11",
     "@storybook/addons": "^5.1.11",
     "@storybook/react": "^5.1.11",
+    "babel-jest": "^26.6.3",
     "babel-plugin-styled-components": "^1.10.6",
+    "babel-preset-gatsby": "^0.12.1",
     "eslint": "^6.3.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.14.3",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^26.6.3",
+    "react-test-renderer": "^17.0.1",
     "yarn-run-all": "^3.1.1"
   }
 }
