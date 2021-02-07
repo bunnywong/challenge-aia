@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table'
 import xor from 'lodash/xor'
+import includes from 'lodash/includes'
 
 function HeroTable({ items }) {
   const [favorites, setFavorites] = useState([])
@@ -14,7 +15,7 @@ function HeroTable({ items }) {
   const getFavorite = (cell, row) => {
     return (
       <button onClick={() => handleClickFavorite(row.id)}>
-        {favorites.includes(row.id) ? '❤️' : '🖤'}
+        {includes(favorites, row.id) ? '❤️' : '🖤'}
       </button>
     )
   }
