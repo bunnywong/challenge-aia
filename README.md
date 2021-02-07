@@ -1,8 +1,8 @@
 <h1 align="center">
   SPA react.js demo
 </h1>
-<p align="center">
-  Try React.js and Story :)
+
+Try React.js and Storybook, preview [here](https://challenge-hero-333.web.app/) :)
 
 ## Quick start
 
@@ -13,6 +13,8 @@ $ cd challenge-hero
 $ npm run start
 ```
 
-## Deploy
+## Run test
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/markoradak/gatsby-starter-storybook)
+```bash
+$ npm run test
+```
