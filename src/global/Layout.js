@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
-import { StaticQuery, graphql } from 'gatsby';
+import React from 'react'
+import PropTypes from 'prop-types'
+import Helmet from 'react-helmet'
+import { StaticQuery, graphql } from 'gatsby'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'react-bootstrap-table/dist/react-bootstrap-table-all.min.css'
 
-import GlobalStyle from './GlobalStyle';
+import GlobalStyle from './GlobalStyle'
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -22,22 +22,17 @@ const Layout = ({ children }) => (
       <>
         <Helmet>
           <title>{data.site.siteMetadata.title}</title>
-          <meta
-            name="apple-mobile-web-app-status-bar-style"
-            content="default"
-          />
+          <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         </Helmet>
         <GlobalStyle />
-        <>
-          {children}
-        </>
+        <>{children}</>
       </>
     )}
   />
-);
+)
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-};
+}
 
-export default Layout;
+export default Layout
