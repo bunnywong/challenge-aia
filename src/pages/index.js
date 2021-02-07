@@ -6,7 +6,7 @@ import xor from 'lodash/xor'
 
 import Layout from 'src/global/Layout'
 import axios from 'src/components/_settings/axios'
-import HeroCarousel from 'src/components/organisms/carousel/'
+import HeroCarousel from 'src/components/molecules/hero-carousel/'
 
 function IndexPage() {
   const [items, setItems] = useState([])

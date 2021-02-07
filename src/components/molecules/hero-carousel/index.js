@@ -9,7 +9,9 @@ function HeroCarousel({ items }) {
         items.map((item, index) => (
           <div key={index}>
             <img src={item?.image?.url} style={{ maxWidth: `300px` }} />
-            <p className="legend">{item.name}</p>
+            <p className="legend">
+              #{item.id} {item.name}
+            </p>
           </div>
         ))}
     </Carousel>
