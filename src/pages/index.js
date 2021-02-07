@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import Switch from 'react-switch'
-import { Carousel } from 'react-responsive-carousel'
 import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table'
-import styles from 'react-responsive-carousel/lib/styles/carousel.min.css'
 import xor from 'lodash/xor'
 
 import Layout from 'src/global/Layout'
 import axios from 'src/components/_settings/axios'
+import HeroCarousel from 'src/components/organisms/carousel/'
 
 function IndexPage() {
   const [items, setItems] = useState([])
@@ -63,15 +62,7 @@ function IndexPage() {
   return (
     <Layout>
       <section>
-        <Carousel>
-          {items &&
-            items.map((item, index) => (
-              <div key={index}>
-                <img src={item?.image?.url} style={{ maxWidth: `300px` }} />
-                <p className="legend">{item.name}</p>
-              </div>
-            ))}
-        </Carousel>
+        <HeroCarousel items={items} />
         <div className="p-3">
           <strong>Random Images: </strong>
           <Switch onChange={() => handleSwitch()} checked={random} className="ml-3" />
